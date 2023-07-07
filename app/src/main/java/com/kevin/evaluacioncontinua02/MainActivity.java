@@ -22,13 +22,12 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Agregar el código del Onboarding aquí
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish(); // Cerrar la actividad actual después de la transición
+                finish();
             }
         }, ONBOARDING_DELAY);
     }
